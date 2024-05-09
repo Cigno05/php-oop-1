@@ -35,9 +35,16 @@ require_once __DIR__ . '/db.php';
                     <div class="col">
                         <div class="card text-center mt-5">
                             <div class="card-body">
-                                <h5 class="card-title">titolo</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">lingua</h6>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">voto</h6>
+                                <h5 class="card-title"><?= $bttf->title ?></h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><?= $bttf->language ?></h6>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><?= $bttf->vote ?> / 10</h6>
+                            </div>
+                        </div>
+                        <div class="card text-center mt-5">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $laVitaEBella->title ?></h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><?= $laVitaEBella->language ?></h6>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><?= $laVitaEBella->vote ?> / 10</h6>
                             </div>
                         </div>
                     </div>
