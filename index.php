@@ -22,18 +22,16 @@ require_once __DIR__ . '/db.php';
     <div id="app">
 
         <header>
-            <nav class="navbar bg-primary" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Boolean Production</a>
-                </div>
-            </nav>
+
+        <?php include_once __DIR__ . '/components/header.php'; ?>
+            
         </header>
 
         <main>
             <div class="container">
                 <div class="row">
                     <?php foreach ($movies as $movie) { ?>
-                    <div class="col">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                         <div class="card text-center mt-5">
                             <div class="card-body">
                                 <h5 class="card-title"><?= $movie->title ?></h5>
