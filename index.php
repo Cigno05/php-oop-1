@@ -29,7 +29,8 @@ require_once __DIR__ . '/db.php';
 
         <main>
             <div class="container">
-                <div class="row">
+                <div class="row mt-5">
+                    <h3>Tutti i Film</h3>
                     <?php foreach ($movies as $movie) { ?>
                     <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                         <div class="card text-center mt-5">
@@ -38,6 +39,25 @@ require_once __DIR__ . '/db.php';
                                 <h6 class="card-subtitle mb-2 text-body-secondary"><?= $movie->language ?></h6>
                                 <h6 class="card-subtitle mb-2 text-body-secondary"><?= $movie->vote ?> / 10</h6>
                                 <h6 class="card-subtitle mb-2 text-body-secondary"><?= $movie->genre ?></h6>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><?= $movie->relase_year ?></h6>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">Durata: <?= $movie->duration ?>'</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <?php } ?>
+                </div>
+                <div class="row mt-5">
+                <h3>Tutte le serie TV</h3>
+                    <?php foreach ($TVSeries as $TVSerie) { ?>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card text-center mt-5">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $TVSerie->title ?></h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><?= $TVSerie->language ?></h6>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><?= $TVSerie->vote ?> / 10</h6>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><?= $TVSerie->genre ?></h6>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><?= $TVSerie->relase_year ?></h6>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">Numero di stagioni: <?= $TVSerie->seasons ?></h6>
                             </div>
                         </div>
                     </div>

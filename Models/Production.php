@@ -1,6 +1,8 @@
 <?php
 
 require_once __DIR__ . "../Genre.php";
+require_once __DIR__ ."../Movie.php";
+require_once __DIR__ ."/TVSerie.php";
 
 class Production
 {
@@ -34,7 +36,7 @@ class Production
 
 
     // construct
-    public function __construct(string $_title, string $_language, int $_vote, Genre $_genre)
+    public function __construct(string $_title, string $_language, int $_vote, string $_genre)
     {
 
         $this->title = $_title;
