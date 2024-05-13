@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . "../Genre.php";
+
 class Production
 {
 
@@ -7,6 +9,9 @@ class Production
     public $title;
     public $language;
     public $vote;
+
+
+    public $genre;
 
     // metodi
     public function setVote($_vote)
@@ -27,12 +32,15 @@ class Production
         }
     }
 
+
     // construct
-    public function __construct(string $_title, string $_language, int $_vote)
+    public function __construct(string $_title, string $_language, int $_vote, Genre $_genre)
     {
 
         $this->title = $_title;
         $this->setLanguage(strtoupper($_language));
         $this->setVote($_vote);
+        $this->genre= $_genre;
     }
 }
+
